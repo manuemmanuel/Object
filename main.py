@@ -45,6 +45,8 @@ def main():
                 prediction[0]["labels"],
                 prediction[0]["boxes"],
             ):
+                st.write(f"Number of detected objects: {len(prediction)}")
+
                 if score > 0.5:
                     st.write(f"Detected object: {label} with confidence: {score}")
 
